@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> itemAdapter;
     ListView lvItems;
     private final int REQUEST_CODE = 20;
+    private final int RESULT_CODE = 21;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         readItems();
         itemAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
         lvItems.setAdapter(itemAdapter);
-        items.add("First Item");
-        items.add("Second Item");
+       // items.add("First Item");
+        //items.add("Second Item");
         setupListViewListener();
         setupListViewClickListener();
     }
@@ -103,10 +104,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
-            int position =  getIntent().getIntExtra("position",0);
-            String changedText = getIntent().getStringExtra("original text");
-            items.set(position,changedText);
+      //Save button crashes if resultCode==RESULT_CODE
+        if (resultCode == RESULT_CODE  && requestCode == REQUEST_CODE) {
+            int position =  getIntent().getIntExtra("original pos",0);
+            String changedText = getIntent().getStringExtra("text changed");
+            items.set(position, changedText);
             itemAdapter.notifyDataSetChanged();
             writeItems();
         }
