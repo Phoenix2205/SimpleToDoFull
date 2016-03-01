@@ -106,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
       //Save button crashes if resultCode==RESULT_CODE
         if (resultCode == RESULT_CODE  && requestCode == REQUEST_CODE) {
-            int position =  getIntent().getIntExtra("original pos",0);
-            String changedText = getIntent().getStringExtra("text changed");
+           int position =  data.getIntExtra("original pos",0);
+            String changedText = data.getStringExtra("text changed");
             items.set(position, changedText);
             itemAdapter.notifyDataSetChanged();
             writeItems();
