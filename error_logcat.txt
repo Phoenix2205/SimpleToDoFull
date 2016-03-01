@@ -1,0 +1,24 @@
+﻿W/dalvikvm( 2799): threadid=1: thread exiting with uncaught exception (group=0xa4d00b20)
+E/AndroidRuntime( 2799): FATAL EXCEPTION: main
+E/AndroidRuntime( 2799): Process: com.codepath.simpletodo, PID: 2799
+E/AndroidRuntime( 2799): java.lang.RuntimeException: Unable to instantiate activity ComponentInfo{com.codepath.simpletodo/com.codepath.simpletodo.EditItemActivity}: java.lang.NullPointerException
+E/AndroidRuntime( 2799): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2110)
+E/AndroidRuntime( 2799): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2233)
+E/AndroidRuntime( 2799): 	at android.app.ActivityThread.access$800(ActivityThread.java:135)
+E/AndroidRuntime( 2799): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1196)
+E/AndroidRuntime( 2799): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/AndroidRuntime( 2799): 	at android.os.Looper.loop(Looper.java:136)
+E/AndroidRuntime( 2799): 	at android.app.ActivityThread.main(ActivityThread.java:5001)
+E/AndroidRuntime( 2799): 	at java.lang.reflect.Method.invokeNative(Native Method)
+E/AndroidRuntime( 2799): 	at java.lang.reflect.Method.invoke(Method.java:515)
+E/AndroidRuntime( 2799): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+E/AndroidRuntime( 2799): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+E/AndroidRuntime( 2799): 	at dalvik.system.NativeStart.main(Native Method)
+E/AndroidRuntime( 2799): Caused by: java.lang.NullPointerException
+E/AndroidRuntime( 2799): 	at com.codepath.simpletodo.EditItemActivity.<init>(EditItemActivity.java:12)
+E/AndroidRuntime( 2799): 	at java.lang.Class.newInstanceImpl(Native Method)
+E/AndroidRuntime( 2799): 	at java.lang.Class.newInstance(Class.java:1208)
+E/AndroidRuntime( 2799): 	at android.app.Instrumentation.newActivity(Instrumentation.java:1061)
+E/AndroidRuntime( 2799): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2101)
+E/AndroidRuntime( 2799): 	... 11 more
+W/ActivityManager(  527):   Force finishing activity com.codepath.simpletodo/.EditItemActivity
